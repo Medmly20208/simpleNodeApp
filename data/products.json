@@ -1,0 +1,21 @@
+[{
+    "id":0,
+    "productName":"air pods 2022",
+    "description":"Quick access to Siri by saying Hey Siri,More than 24 hours total listening time with the Charging Case,Effortless setup, in-ear detection, and automatic switching for a magical experience,Easily share audio between two sets of AirPods on your iPhone, iPad, iPod touch, or Apple TV",
+    "productPrice":100
+    
+},
+{
+    "id":1,
+    "productName":"gaming pc",
+    "description":"This powerful gaming PC is capable of running all your favorite games such as Call of Duty Warzone, Fornite, Escape from Tarkov, Grand Theft Auto V, Valorant, World of Warcraft",
+    "productPrice":1600
+    
+},
+{
+    "id":2,
+    "productName":"iphone 13",
+    "description":"Tested for battery health and guaranteed to come with a battery that exceeds 90% of original capacity.",
+    "productPrice":1000
+    
+}]
