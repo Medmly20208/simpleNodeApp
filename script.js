@@ -1,12 +1,7 @@
 // get main tag
 const productsContainer = document.getElementById("productsContainer");
-const ProductCardSection = document.createElement("section");
 
-ProductCardSection.classList.add("productCard");
-
-// product Card Structure
-
-//
+// return product Card Structure html + css classes
 const getProductCardStructure = (productName, productPrice, productImage) => {
   const ProductCardSection = document.createElement("section");
   ProductCardSection.classList.add("productCard");
@@ -36,11 +31,8 @@ const getProductCardStructure = (productName, productPrice, productImage) => {
   return ProductCardSection;
 };
 
-// get products data
-const getProductData = async () => {
-  const data = await fetch("http://127.0.0.1:5000/data");
-  const productsList = await data.json();
-
+// add product cards to dom
+const addCardProductTodDom = (productsList) => {
   for (let product of productsList) {
     productsContainer.appendChild(
       getProductCardStructure(
@@ -52,4 +44,11 @@ const getProductData = async () => {
   }
 };
 
-getProductData();
+// get products data from local server
+const getProductsData = async () => {
+  const data = await fetch("http://127.0.0.1:5000/data");
+  const productsList = await data.json();
+  return productsList;
+};
+
+getProductsData().then((productsList) => addCardProductTodDom(productsList));

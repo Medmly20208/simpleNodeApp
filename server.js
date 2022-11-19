@@ -1,16 +1,14 @@
 const http = require("http");
 const fs = require("fs");
 
-//get a string
 const ProductsData = fs.readFileSync("./data/products.json");
 
 const server = http.createServer((req, res) => {
   const pathName = req.url;
-  //console.log(url.parse(req.url));
 
-  // overfiew path
+  // data path
   if (pathName === "/data") {
-    // slove cors policy bug and specify type of response data
+    // solve cors policy bug and specify type of response data
     res.writeHead(200, {
       "Access-Control-Allow-Origin": "*",
       "Content-type": "application/json",
@@ -18,9 +16,9 @@ const server = http.createServer((req, res) => {
     res.end(ProductsData);
   }
 
-  // not found page
+  // not found path
   else {
-    res.end("not found brudda");
+    res.end("not found path");
   }
 });
 
