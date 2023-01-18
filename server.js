@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs");
+const PORT = process.env.PORT || 3030;
 
 const ProductsData = fs.readFileSync("./data/products.json");
 
@@ -23,6 +24,6 @@ const server = http.createServer((req, res) => {
 });
 
 // listen to server
-server.listen(5000, () => {
+server.listen(PORT, () => {
   console.log("listening on port 5000");
 });
