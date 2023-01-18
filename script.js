@@ -46,7 +46,7 @@ const addCardProductTodDom = (productsList) => {
 
 // get products data from local server
 const getProductsData = async () => {
-  const data = await fetch("http://127.0.0.1:5000/data");
+  const data = await fetch("https://techproducts.onrender.com/data");
   const productsList = await data.json();
   return productsList;
 };
